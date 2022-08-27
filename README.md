@@ -15,11 +15,15 @@ Segue a lista de tarefas a serem desenvolvidas no projeto:
     - [X] Instalar o Python
     - [X] Instalar Visual Studio Code
 - [ ] Criar e ativar o ambiente virtual
+```
+python -m venv .\venv\
+venv\Scripts\activate
+````
 - [ ] Instalar Djano
 - [ ] Criar o projeto PersonalCheff
 - [ ] Subir o servidor e testar o projeto
 - [ ] Alterar o idioma do projeto para `pt-br`
-- [ ] Alterar o timezone do projeto para `Americana/Sao_Paulo`
+- [ ] Alterar o timezone do projeto para `America/Sao_Paulo`
 - [ ] Criar o app receitas
 - [ ] Registar o app receitas
 - [ ] Configurar a rota  inicial(index)
