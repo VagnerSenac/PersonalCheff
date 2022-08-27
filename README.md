@@ -23,10 +23,26 @@ venv\Scripts\activate
 ````
 python -m pip install django==3.2
 ````
-- [ ] Criar o projeto PersonalCheff
+- [x] Criar o projeto PersonalCheff
+````
+django-admin.py help
+django-admin.py startproject PersonalCheffProj
+````
 - [ ] Subir o servidor e testar o projeto
-- [ ] Alterar o idioma do projeto para `pt-br`
-- [ ] Alterar o timezone do projeto para `America/Sao_Paulo`
+````
+cd PersonalCheffProj
+python manage.py runserver
+````
+- [x] Alterar o idioma do projeto para `pt-br`
+````
+localizar o arquivo settings.py na pasta do projeto
+ mudar para pt-br  ---  linha 106
+ ````
+- [x] Alterar o timezone do projeto para `America/Sao_Paulo`
+ ````
+localizar o arquivo settings.py na pasta do projeto
+ mudar para America/Sao_Paulo  ---  linha 108
+  ````
 - [ ] Criar o app receitas
 - [ ] Registar o app receitas
 - [ ] Configurar a rota  inicial(index)
