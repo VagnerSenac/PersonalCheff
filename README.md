@@ -12,14 +12,17 @@
 ### Lista de tarefas
 Segue a lista de tarefas a serem desenvolvidas no projeto:
 - [X] Pré-requisitos
-    - [X] Instalar o Python
+    - [X] Instalar o Python 3.10.6
     - [X] Instalar Visual Studio Code
-- [ ] Criar e ativar o ambiente virtual
+- [x] Criar e ativar o ambiente virtual
 ```
 python -m venv .\venv\
 venv\Scripts\activate
 ````
-- [ ] Instalar Djano
+- [x] Instalar Djano
+````
+python -m pip install django==3.2
+````
 - [ ] Criar o projeto PersonalCheff
 - [ ] Subir o servidor e testar o projeto
 - [ ] Alterar o idioma do projeto para `pt-br`
