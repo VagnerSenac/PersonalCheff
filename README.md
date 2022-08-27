@@ -57,8 +57,36 @@ acrescetar em INSTALLED_APPS (linha 33) o seguinte item:
 'receitas',
  ````
 - [ ] Configurar a rota  inicial(index)
+ ````
+criar dentro da pasta receitas um arquivo chamado urls.py contendo:
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index')
+]
+ ````
 - [ ] Criar a view para a rota inicial
+````
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Seja bem Vindo")
+````
 - [ ] Registar a rota inicial
+````
+Modificar o arquivo urls.py da pasta PersonalCheffProj
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('receitas.urls')),
+]
+````
 - [ ] Criar o arquivo index
 
 ## 📝 Licença
