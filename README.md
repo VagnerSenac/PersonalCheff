@@ -43,8 +43,19 @@ localizar o arquivo settings.py na pasta do projeto
 localizar o arquivo settings.py na pasta do projeto
  mudar para America/Sao_Paulo  ---  linha 108
   ````
-- [ ] Criar o app receitas
+- [x] Criar o app receitas
+ ````
+Criar um novo terminal de uso
+cd PersonalCheffproj
+python manage.py startapp receitas
+ ````
+
 - [ ] Registar o app receitas
+ ````
+abrir o arquivo settings.py que está dentro da pasta PersonalCheffProj
+acrescetar em INSTALLED_APPS (linha 33) o seguinte item:
+'receitas',
+ ````
 - [ ] Configurar a rota  inicial(index)
 - [ ] Criar a view para a rota inicial
 - [ ] Registar a rota inicial
