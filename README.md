@@ -87,8 +87,20 @@ urlpatterns = [
     path('', include('receitas.urls')),
 ]
 ````
-- [ ] Criar o arquivo index
+- [ ] Criar um arquivo index.html
+    - Dentro da pasta receitas(app), crie a pasta 'templates'
+	- dentro da pasta templates, crie um arquivo HTMl  -- ---  Index.html
+	-editar o arquivo views.py dentro da pasta do app
+
+	``` python
+         from django.shortcuts import render
+         def index(request):
+         return render(request, 'index.html')
+	
+	```
+
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
+
