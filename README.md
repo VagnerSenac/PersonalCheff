@@ -98,7 +98,12 @@ urlpatterns = [
          return render(request, 'index.html')
 	
 	```
+views.py  --- acrescentar
 
+def sucodelaranja(request):
+    return render(request, 'sucodelaranja.html')
+
+Criar um arquivo sucodelaranja.html na pasta template
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
