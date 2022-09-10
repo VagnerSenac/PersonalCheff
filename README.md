@@ -105,6 +105,41 @@ def sucodelaranja(request):
 
 Criar um arquivo sucodelaranja.html na pasta template
 
+-[] Integrar arquivos estáticos (CSS, JS, IMG)
+- Dentro da pasta do projeto (PersonalCheffProj), criar a pasta `static`
+- Dentro da pasta `static`, colocar as imagens, os aqurivos css e as arquivos js que for utilizar
+- no arquivo `setting.py`realize a importação da biblioteca `os` através do comando `import os` (linha 12)
+ - mudar a linha 58 do `setting.py`:
+ `'DIRS': [os.path.join(BASE_DIR, 'receitas/templates')],`
+
+ - mudar a linha 122 do `setting.py`:
+ `STATIC_ROOT = os.path.join(BASE_DIR, 'static')`
+  `STATICFILES_DIRS = [`
+    `os.path.join(BASE_DIR, 'PersonalCheffProj/static')`
+`]`
+
+Executar o comando:
+`python manage.py collectstatic`
+
+colocar no inicio da pagina (index.html) conexão com o python
+`{% load static %}`
+
+Quando for inserir uma imagem statica tem que colocar:
+  `<img src="{% static 'logo.png' %}" alt="">`
+  `<link rel="stylesheet" href="{% static 'estilos.css' %}">`
+
+-[] Utilizando links
+-[] Criando o base.html
+-[] Separando em partials
+-[] Renderizando dados dinamicamente
+-[] Criando um dicionario com as receitas
+-[] Criando o banco de dados(MySQL/MariaDB)
+-[] Instalando o conector do bando de dados MySQL
+-[] Criando o modelo da receita
+-[] Criando a migration (mapeamento)
+-[] Realizando a migration
+-[] Registrando um modelo no admin
+-[] Criando um usuário para o ambiente administrativo
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
