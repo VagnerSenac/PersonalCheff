@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content%}
-<h1>
-     <img src="{% static 'logo.png' %}" class="imagem-logo">
-     PersonalCheff
-     </h1>
+{% include 'partials/header.html' %}
+{% include 'partials/menu.html' %}
+
    <h2>Receita do suco de laranja</h2> 
    <h3>Modo de Preparo</h3>
    <ul>
@@ -15,4 +14,5 @@
    <p>
     <a href="{% url 'index' %}">Voltar</a>
     </p>
-    {% endblock %}
+{% include 'partials/footer.html' %}
+{% endblock %}

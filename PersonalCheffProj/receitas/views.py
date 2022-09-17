@@ -18,3 +18,6 @@ def sucodemaca(request):
 
 def sucodemelancia(request):
     return render(request, 'sucodemelancia.html')
+
+def contato(request):
+    return render(request, 'contato.html')

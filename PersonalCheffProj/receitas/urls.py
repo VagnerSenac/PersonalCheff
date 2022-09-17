@@ -7,5 +7,6 @@ urlpatterns = [
     path('sucodelimao', views.sucodelimao, name='sucodelimao'),
     path('sucodeabacaxi', views.sucodeabacaxi, name='sucodeabacaxi'),
     path('sucodemaca', views.sucodemaca, name='sucodemaca'),
-    path('sucodemelancia', views.sucodemelancia, name='sucodemelancia')
+    path('sucodemelancia', views.sucodemelancia, name='sucodemelancia'),
+     path('contato', views.contato, name='contato')
 ]

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+{% include 'partials/header.html' %}
+{% include 'partials/menu.html' %}
+
+   <h2>Entre em contato</h2> 
+    <form>
+        Nome: <input><br>
+        Telefone: <input type="tel"><br>
+        Menssagem:<br>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    </form>
+   <p>
+        <a href="{% url 'index' %}">Voltar</a>
+   </p>
+{% include 'partials/footer.html' %}
+{% endblock %}

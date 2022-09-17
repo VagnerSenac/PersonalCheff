@@ -138,7 +138,12 @@ Quando for inserir uma imagem statica tem que colocar:
  - neste arquivo, no local aonde será carregado o conteúdo das outras páginas, deve existir os          
     delimitadores `{% block content%}` e `{% endblock %}`
 
--[] Separando em partials
+-[X] Separando em partials
+ - criar uma pasta chamada `partials`dentro da pasta `templates`
+ - dentro da pasta `templates` crie os arquivos que serão as **partes globais** utilizando no seu projeto como `header.html`, `footer.html`, `menu.html`, `side-bar.html`, etc. No nosso exemplo criamos as partials `header.html` e `footer.html`
+ - insira em cada um dos arquivos partials seus códigos correspondentes. Exemplo: no arquivo header.html eu insiro todo o conteúdo que eu quero que seja apresentado no cabeçalho da minha  aplicação. Não se esqueça do comando `{% load static %}`.
+ - para incluir as partials nos arquivos de destino utilize o comando `include`da seuinte maneira: `{% include 'partials/header' %}`
+ 
 -[] Renderizando dados dinamicamente
 -[] Criando um dicionario com as receitas
 -[] Criando o banco de dados(MySQL/MariaDB)

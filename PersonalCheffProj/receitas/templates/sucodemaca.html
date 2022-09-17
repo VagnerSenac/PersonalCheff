@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content%}
-<h1>
-     <img src="{% static 'logo.png' %}" class="imagem-logo">
-     PersonalCheff
-     </h1>
-   <h2>Receita do suco de maçâ</h2> 
+{% include 'partials/header.html' %}
+{% include 'partials/menu.html' %}
+
+   <h2>Receita do suco de maçã</h2> 
    <h3>Modo de Preparo</h3>
    <ul>
         <li>Descasque e tire as sementes das maçãs</li>
@@ -17,4 +16,5 @@
    <p>
     <a href="{% url 'index' %}">Voltar</a>
     </p>
-    {% endblock %}
+{% include 'partials/footer.html' %}
+{% endblock %}

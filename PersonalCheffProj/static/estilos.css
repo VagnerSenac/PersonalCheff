@@ -28,3 +28,10 @@ th{
 .icone-suco{
     height: 20px;
 }
+nav{
+    text-align: center;
+    background-color: darkgray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
