@@ -28,7 +28,7 @@ python -m pip install django==3.2
 django-admin.py help
 django-admin.py startproject PersonalCheffProj
 ````
-- [ ] Subir o servidor e testar o projeto
+- [X] Subir o servidor e testar o projeto
 ````
 cd PersonalCheffProj
 python manage.py runserver
@@ -50,13 +50,13 @@ cd PersonalCheffproj
 python manage.py startapp receitas
  ````
 
-- [ ] Registar o app receitas
+- [X] Registar o app receitas
  ````
 abrir o arquivo settings.py que está dentro da pasta PersonalCheffProj
 acrescetar em INSTALLED_APPS (linha 33) o seguinte item:
 'receitas',
  ````
-- [ ] Configurar a rota  inicial(index)
+- [X] Configurar a rota  inicial(index)
  ````
 criar dentro da pasta receitas um arquivo chamado urls.py contendo:
 
@@ -67,7 +67,7 @@ urlpatterns = [
     path('', views.index, name='index')
 ]
  ````
-- [ ] Criar a view para a rota inicial
+- [X] Criar a view para a rota inicial
 ````
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -75,7 +75,7 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Seja bem Vindo")
 ````
-- [ ] Registar a rota inicial
+- [X] Registar a rota inicial
 ````
 Modificar o arquivo urls.py da pasta PersonalCheffProj
 
@@ -87,7 +87,7 @@ urlpatterns = [
     path('', include('receitas.urls')),
 ]
 ````
-- [ ] Criar um arquivo index.html
+- [X] Criar um arquivo index.html
     - Dentro da pasta receitas(app), crie a pasta 'templates'
 	- dentro da pasta templates, crie um arquivo HTMl  -- ---  Index.html
 	-editar o arquivo views.py dentro da pasta do app
@@ -105,7 +105,7 @@ def sucodelaranja(request):
 
 Criar um arquivo sucodelaranja.html na pasta template
 
--[] Integrar arquivos estáticos (CSS, JS, IMG)
+-[X] Integrar arquivos estáticos (CSS, JS, IMG)
 - Dentro da pasta do projeto (PersonalCheffProj), criar a pasta `static`
 - Dentro da pasta `static`, colocar as imagens, os aqurivos css e as arquivos js que for utilizar
 - no arquivo `setting.py`realize a importação da biblioteca `os` através do comando `import os` (linha 12)
@@ -128,8 +128,16 @@ Quando for inserir uma imagem statica tem que colocar:
   `<img src="{% static 'logo.png' %}" alt="">`
   `<link rel="stylesheet" href="{% static 'estilos.css' %}">`
 
--[] Utilizando links
--[] Criando o base.html
+-[X] Utilizando links
+- para criar um link para a pagina index, independente de onde você esteja utilize o comando `url`:
+`<a href="{% url 'sucodelaranja' %}>Página inicial</a>`
+
+-[X] Criando o base.html
+ - na pasta `template` crie o arquivo `base.html`. Esse arquivo contém todo o código de estrutura comum à todas as páginas. Nesse arquivo deve ficar tudo que tiver antes do `body`e tudo que tiver depois do `/body`.
+ - neste arquivo deve conter o `{% load static%}`
+ - neste arquivo, no local aonde será carregado o conteúdo das outras páginas, deve existir os          
+    delimitadores `{% block content%}` e `{% endblock %}`
+
 -[] Separando em partials
 -[] Renderizando dados dinamicamente
 -[] Criando um dicionario com as receitas

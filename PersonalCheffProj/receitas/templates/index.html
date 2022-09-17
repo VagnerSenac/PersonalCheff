@@ -1,15 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'estilos.css' %}">
-    <link rel="shortcut icon" href="{% static 'logo.png' %}" type="image/x-icon">
-    <title>PersonalCheff</title>
-</head>
-<body>
+{% block content%}
    <h1>
     <img src="{% static 'logo.png' %}" class="imagem-logo">
     PersonalCheff
@@ -27,36 +18,35 @@
         <img src="{% static 'suco.png' %}" class="icone-suco">
         Suco de Laranja</td>
     <td><a href="https://www.youtube.com/watch?v=Nn9140bDPnc">Vídeo da Receita</a></td>
-    <td><a href="sucodelaranja">Ver receita completa</a></td>
+    <td><a href="{% url 'sucodelaranja' %}">Ver receita completa</a></td>
     </tr>
     <tr>
     <td>
         <img src="{% static 'suco.png' %}" class="icone-suco">
         Suco de Limão</td>
     <td><a href="https://www.youtube.com/watch?v=7aavIewcSY4">Vídeo da Receita</a></td>
-    <td><a href="sucodelimao">Ver receita completa</a></td>
+    <td><a href="{% url 'sucodelimao'%}">Ver receita completa</a></td>
     </tr>
     <tr>
     <td>
         <img src="{% static 'suco.png' %}" class="icone-suco">
         Suco de Abacaxi</td>
     <td><a href="https://www.youtube.com/watch?v=jLmFRuPv2eo">Vídeo da Receita</a></td>
-    <td><a href="sucodeabacaxi">Ver receita completa</a></td>
+    <td><a href="{% url 'sucodeabacaxi'%}">Ver receita completa</a></td>
     </tr>
     <td>
         <img src="{% static 'suco.png' %}" class="icone-suco">
         Suco de Maçã</td>
     <td><a href="https://www.youtube.com/watch?v=yJ1LVXgudwQ">Vídeo da Receita</a></td>
-    <td><a href="sucodemaca">Ver receita completa</a></td>
+    <td><a href="{% url 'sucodemaca' %}">Ver receita completa</a></td>
     </tr>
     </tr>
     <td>
         <img src="{% static 'suco.png' %}" class="icone-suco">
         Suco de Melancia</td>
     <td><a href="https://www.youtube.com/watch?v=tlHwjpJpYBE">Vídeo da Receita</a></td>
-    <td><a href="sucodemelancia">Ver receita completa</a></td>
+    <td><a href="{% url 'sucodemelancia'%}">Ver receita completa</a></td>
     </tr>
     </table>
    
-</body>
-</html>
+{% endblock %}
