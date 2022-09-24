@@ -144,8 +144,40 @@ Quando for inserir uma imagem statica tem que colocar:
  - insira em cada um dos arquivos partials seus códigos correspondentes. Exemplo: no arquivo header.html eu insiro todo o conteúdo que eu quero que seja apresentado no cabeçalho da minha  aplicação. Não se esqueça do comando `{% load static %}`.
  - para incluir as partials nos arquivos de destino utilize o comando `include`da seuinte maneira: `{% include 'partials/header' %}`
  
--[] Renderizando dados dinamicamente
--[] Criando um dicionario com as receitas
+-[x] Renderizando dados dinamicamente
+    - trocar informações fixas no html por informações dinâmicas vindas do arquivo python
+    - Quero gerar a lista de receitas de forma dinâmica, vamos fazer isso utilizando o recurso do Django
+    que passa uma informação para minhas templates(.html) através da passagem de um parâmetro no comando `render`que está em minha view (.py):
+    ```python
+        return render(request, 'index.html', 
+        {'nome_da_receita': 'suco de laranja'})
+    ```
+    - Observe que passei atravé do comando `render` um `dicionário` para a template (`index.html`)
+    eu posso exibir o conteúdo desse dicionário da seguinte forma:
+        ```python
+        <td><img src="{% static 'suco.png'%}" class="icone-suco">
+        {{nome_da_receita}} </td>
+        ```
+
+        falta itens 
+
+
+
+-[X] Criando um dicionario com as receitas
+
+{% for chave, uma_receita in lista_receitas.items %}
+   <tr>
+    <td>
+        <img src="{% static 'suco.png' %}" class="icone-suco">       
+             {{uma_receita}} 
+        </td>
+    <td><a href="https://www.youtube.com/watch?v=Nn9140bDPnc">Vídeo da Receita</a></td>
+    <td><a href="{% url 'sucodeabacaxi' %}" class="btn btn-info" >Ver receita completa</a></td>
+    </tr>
+    <tr>
+        {% endfor %}
+
+
 -[] Criando o banco de dados(MySQL/MariaDB)
 -[] Instalando o conector do bando de dados MySQL
 -[] Criando o modelo da receita
