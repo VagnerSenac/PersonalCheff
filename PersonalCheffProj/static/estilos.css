@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body{
-    background-color: rgb(81, 88, 94);
+    background-color: rgb(205, 206, 207);
     color: rgb(24, 22, 22);
     font-family: 'Segoe UI';
 }
@@ -30,7 +30,7 @@ th{
 }
 nav{
     text-align: center;
-    background-color: darkgray;
+    background-color: rgb(214, 212, 212);
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 8px;
