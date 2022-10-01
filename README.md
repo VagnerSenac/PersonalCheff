@@ -236,10 +236,27 @@ Usar terminal:
 - [X] Criando um usuário para o ambiente administrativo
 Cadastrar usuário Super User
 `python manage.py createsuperuser `
+Acessando o ambiente administrativo
+`python manage.py runserver`
+`http://127.0.0.1:8000/admin/`
 
-- [ ] Registrando um modelo no admin
+- [X] Registrando um modelo no admin
 
+PAra criar o módulo referente ao APP no ambiente administrativo, precisamos registrar nossos modelosno adminin
+abra o arquivo  `receitas\admin.py`e registre seu modelo:
+```python
+from django.contrib import admin
+from.models import Receitas
 
+# Register your models here.
+
+admin.site.register(Receitas)
+
+```
+
+[] Trazendo os dados do BD
+
+[] Exibição das páginas individuais das receitas
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
