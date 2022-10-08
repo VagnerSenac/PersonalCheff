@@ -17,9 +17,15 @@
           {{receita.nome_receita}} 
         </td>
     <td><a href="{{receita.video}}">Vídeo da Receita</a></td>
-    <td><a href="{% url 'sucodeabacaxi' %}" class="btn btn-info" >Ver receita completa</a></td>
+    <td><a href="{% url 'receita'  receita.id %}" class="btn btn-info" >Ver receita completa</a></td>
 
-    <td>{{receita.nota}}</td>
+    <td>
+        {% with ''|center:receita.nota as range %}
+        {% for i in range %}
+        *
+        {% endfor %}
+        {% endwith %}
+    </td>
  
     <tr>
     {% endfor %}
