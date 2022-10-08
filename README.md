@@ -253,7 +253,7 @@ from.models import Receitas
 admin.site.register(Receitas)
 
 ```
-
+   
 [] Trazendo os dados do BD
 
 [] Exibição das páginas individuais das receitas
